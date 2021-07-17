@@ -1,0 +1,57 @@
+﻿<Window x:Class="BitmapReader.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="SlateGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.ColumnSpan="2" Click="BrowseButton_OnClick">Browse</Button>
+        <Viewbox Grid.Row="1" Grid.Column="0">
+            <Grid Name="BitmapDisplayGrid" />
+        </Viewbox>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock>FileSize: </TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Name="FileSize" />
+            <TextBlock Grid.Row="1" Grid.Column="0">Offset: </TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Name="Offset" />
+            <TextBlock Grid.Row="2" Grid.Column="0">HeaderSize: </TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Name="HeaderSize" />
+            <TextBlock Grid.Row="3" Grid.Column="0">ImageWidth: </TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Name="ImageWidth" />
+            <TextBlock Grid.Row="4" Grid.Column="0">ImageHeight: </TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" Name="ImageHeight" />
+            <TextBlock Grid.Row="5" Grid.Column="0">NumberOfColorPlanes: </TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" Name="NumberOfColorPlanes" />
+            <TextBlock Grid.Row="6" Grid.Column="0">BitsPerPixel: </TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1" Name="BitsPerPixel" />
+            <TextBlock Grid.Row="7" Grid.Column="0">Compression: </TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="1" Name="Compression" />
+            <TextBlock Grid.Row="8" Grid.Column="0">ImageSize: </TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="1" Name="ImageSize" />
+        </Grid>
+    </Grid>
+</Window>

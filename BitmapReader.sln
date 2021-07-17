@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapReader.Tests", "BitmapReader.Tests\BitmapReader.Tests.csproj", "{0CD03513-0E63-444D-B498-BA075B30C775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapReader", "BitmapReader\BitmapReader.csproj", "{84045A6A-10DD-4173-9884-5B2441E16EA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapReader.Wpf", "BitmapReader.Wpf\BitmapReader.Wpf.csproj", "{F92F9C96-EDE6-45B0-9166-F51B42469B47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CD03513-0E63-444D-B498-BA075B30C775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD03513-0E63-444D-B498-BA075B30C775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD03513-0E63-444D-B498-BA075B30C775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD03513-0E63-444D-B498-BA075B30C775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84045A6A-10DD-4173-9884-5B2441E16EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84045A6A-10DD-4173-9884-5B2441E16EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84045A6A-10DD-4173-9884-5B2441E16EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84045A6A-10DD-4173-9884-5B2441E16EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F92F9C96-EDE6-45B0-9166-F51B42469B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92F9C96-EDE6-45B0-9166-F51B42469B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92F9C96-EDE6-45B0-9166-F51B42469B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92F9C96-EDE6-45B0-9166-F51B42469B47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
