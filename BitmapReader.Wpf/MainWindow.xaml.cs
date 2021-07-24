@@ -38,7 +38,7 @@ namespace BitmapReader.Wpf
             {
                 for (var column = 0; column < bitmap.ImageWidth; column++)
                 {
-                    var color = bitmap.GetPixel(row, column);
+                    var color = bitmap.GetPixelColor(row, column);
                     AddTextBlockToGrid(color.R, color.G, color.B, row, column);
                 }
             }
@@ -57,9 +57,8 @@ namespace BitmapReader.Wpf
 
         private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
-            var result = openFileDialog.ShowDialog();
-            if (result != true) return;
+            var openFileDialog = new OpenFileDialog {Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*"};
+            if (openFileDialog.ShowDialog() != true) return;
 
             var bitmap = new Bitmap(openFileDialog.FileName);
             PaintBitmap(bitmap);
@@ -68,7 +67,7 @@ namespace BitmapReader.Wpf
 
         private void PrintBitmapInformation(Bitmap bitmap)
         {
-            FileSize.Text = bitmap.FileSize.ToString();
+            FileSize.Text = bitmap.FileSizeInBytes + " bytes";
             Offset.Text = bitmap.Offset.ToString();
             HeaderSize.Text = bitmap.HeaderSize.ToString();
             ImageWidth.Text = bitmap.ImageWidth.ToString();
@@ -76,7 +75,7 @@ namespace BitmapReader.Wpf
             NumberOfColorPlanes.Text = bitmap.NumberOfColorPlanes.ToString();
             BitsPerPixel.Text = bitmap.BitsPerPixel.ToString();
             Compression.Text = bitmap.Compression.ToString();
-            ImageSize.Text = bitmap.ImageSize.ToString();
+            ImageSize.Text = bitmap.ImageSizeInBytes.ToString();
         }
     }
 }

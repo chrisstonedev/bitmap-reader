@@ -7,21 +7,18 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="SlateGray">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Button Grid.ColumnSpan="2" Click="BrowseButton_OnClick">Browse</Button>
-        <Viewbox Grid.Row="1" Grid.Column="0">
-            <Grid Name="BitmapDisplayGrid" />
-        </Viewbox>
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Button Click="BrowseButton_OnClick" VerticalAlignment="Center" Padding="15 10" Margin="10">Browse</Button>
+        <Grid Grid.Row="0" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -53,5 +50,8 @@
             <TextBlock Grid.Row="8" Grid.Column="0">ImageSize: </TextBlock>
             <TextBlock Grid.Row="8" Grid.Column="1" Name="ImageSize" />
         </Grid>
+        <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid Name="BitmapDisplayGrid" />
+        </Viewbox>
     </Grid>
 </Window>
